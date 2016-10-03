@@ -60,14 +60,14 @@ $ git status
 現在のGitの状態を確認できます。
 
 `init`
-add
-commit
+`add`
+`commit`
 
-remote
-clone
-push
-pull
+`remote`
+`clone`
+`push`
+`pull`
 
-status
-log
-diff
+`status`
+`log`
+`diff`

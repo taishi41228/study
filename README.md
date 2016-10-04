@@ -17,6 +17,7 @@
 
 ```
 document.write('Hello World!');
+consle.log('Hello World!');
 ```
 ### write
 
@@ -30,7 +31,7 @@ document.write(markup);
 
 markup: 文字列およびHTMLで記述された文書
 
-`;`までを文と呼びます。
+補足ですが、文字列は`'`で囲みます。また、ソースの先頭、もしくは`;`から`;`までを文と呼びます。
 
 ## 簡単な計算
 
@@ -108,3 +109,14 @@ elements = document.getElementsByClassName(name);
 ```
 element.innerHTML = 'HTMLの要素内の文字列';
 ```
+
+<p id="dom">ここに入るよ</p>
+
+これをプログラムで中身を変える
+
+<p id="dom">ここに入ったよ</p>
+
+domというIDで要素を特定
+
+var dom = document.getElementById('dom');
+dom.innerHTML = 'ここに入ったよ';

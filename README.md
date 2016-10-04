@@ -18,6 +18,7 @@
 ```
 document.write('Hello World!');
 ```
+### write
 
 文字列およびHTMLで記述された文書をブラウザに表示します。
 
@@ -28,6 +29,8 @@ document.write(markup);
 ```
 
 markup: 文字列およびHTMLで記述された文書
+
+`;`までを文と呼びます。
 
 ## 簡単な計算
 
@@ -77,6 +80,9 @@ document.write('</ul>');
 ```
 var x = 5;
 ```
+
+`var`
+`=`
 
 ## 関数を使う
 

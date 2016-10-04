@@ -92,7 +92,7 @@ var x = 5;
 HTMLの各要素にアクセスするための仕組みをDOM（Document Object Model）と呼びます。
 DOMの操作によってHTMLの要素の特定と特定した要素を変更することができるようになります。
 
-構文
+構文m
 ```
 element = document.getElementById(id);
 elements = document.getElementsByTagName(name);

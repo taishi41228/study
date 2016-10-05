@@ -19,6 +19,13 @@
 document.write('Hello World!');
 consle.log('Hello World!');
 ```
+
+ブラウザ上にHello World!が表示され、コンソールにもHello World!が表示されると思います。
+コンソールというのはブラウザ上で右クリックでメニューを出し、「検証する」を選ぶと出てきます。
+ブラウザによってコンソールの表示方法が異なるので、必要に応じて調べてください。
+
+## 基本的な役職
+
 ### write
 
 文字列およびHTMLで記述された文書をブラウザに表示します。
@@ -99,24 +106,73 @@ var x = 5;
 HTMLの各要素にアクセスするための仕組みをDOM（Document Object Model）と呼びます。
 DOMの操作によってHTMLの要素の特定と特定した要素を変更することができるようになります。
 
+### document.getElementById
+
+HTMLの要素にIDを使ってアクセスする
+
 構文
 ```
 element = document.getElementById(id);
-elements = document.getElementsByTagName(name);
-elements = document.getElementsByClassName(name);
 ```
 
+要素の変更の例
 ```
 element.innerHTML = 'HTMLの要素内の文字列';
 ```
 
+```
 <p id="dom">ここに入るよ</p>
+```
 
-これをプログラムで中身を変える
-
+これを次のように変更するプログラムを書きます。
+```
 <p id="dom">ここに入ったよ</p>
+```
 
-domというIDで要素を特定
-
+```
+// domというIDで要素を特定
 var dom = document.getElementById('dom');
 dom.innerHTML = 'ここに入ったよ';
+```
+
+[タグで要素を特定する]() document.getElementsByTagName
+
+[classで要素を特定する]() document.getElementsByClassName
+
+## イベントに応じた処理
+
+ボタンをクリックした時に画面になにか表示したい、ということはよくあることだと思います。
+そのようなときはクリックしてほしい要素をイベントリスナーに登録します。
+
+```
+<button id="btn1">押してね</button>
+```
+
+```
+var btn = document.getElementById('btn1');
+btn.addEventListener('click', function(){
+    document.write('ボタンを押したよ!');
+});
+```
+
+### addEventListener
+
+要素をイベントリスナーに登録する
+
+構文
+```
+addEventListener(event, func);
+```
+
+event 'click'などのイベント名
+
+func そのときの処理
+
+次のような形で表現してもオーケーです。
+
+```
+function(){
+    // ここに処理を記述
+}
+```
+
